@@ -20,5 +20,5 @@ replacements = {
 filename = input("Sisestage failinimi: ")
 
 with open(filename, 'r', encoding = 'UTF-8') as f:
-    for line in f:
-        print(telegramify(line, replacements))
+    for line in f.readlines():
+        print(telegramify(line.rstrip(), replacements))
